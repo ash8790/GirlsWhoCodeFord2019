@@ -1,0 +1,32 @@
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+h1{
+  @font-face {
+    font-family: timesnewroman;
+  }
+  div {
+    font-family: timesnewroman;
+  }
+}
+.bg {
+  background-color:#000000;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+p {
+  margin-left: 500px;
+}
+.boxed {
+  border: 1px solid white ;
+}
+.mobilesOnly {visibility:hidden;}

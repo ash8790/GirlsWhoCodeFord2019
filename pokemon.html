@@ -1,0 +1,48 @@
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+function pokeSubmit(){
+  var param = document.getElementById("pokeInput").value;
+  var pokeURL = "http://pokeapi.co/api/v2/pokemon/" + param;
+
+  $.getJSON(pokeURL, function(data){
+    //console.log(data);
+    //console.log(JSON.stringify(data, null, " "));
+    var pokeID = data.id;
+    var pokeName = data.name;
+    var pokeType1 = data.types[0].type.name;
+    if (data.types.length == 2) {
+        var pokeType2 = data.types[1].type.name;
+    }
+    else var pokeType2 = null;
+    console.log(data)
+    console.log("Number: ", pokeID);
+    console.log("Name: ", pokeName);
+    console.log("Type 1: ", pokeType1);
+    console.log("Type 2: ", pokeType2);
+  });
+}
+</script>
+<body>
+<div data-role="page" id="pokeSearch-page">
+    <div data-role="header" data-theme="b">
+         <h1>Pokeapi Demos</h1>
+    </div>
+    <div data-role="main" class="ui-content">
+    <form id="pokeForm" action="#pokeDetails-page" method="post">
+        <div>
+        <label for="pokeInput">Pokemon name or number:
+        <input type="text" name="pokeInput" id="pokeInput" placeholder="Name/Number" value="">
+        </div>
+        <br>
+        <div>
+        <a class="ui-btn" onclick="pokeSubmit();">Search
+        </div>
+    </form>
+    <div>
+    <ul data-role="listview" data-inset="true" id="pokeDetails">
+    </ul>
+    </div>
+    </div>
+</div>
+</body>

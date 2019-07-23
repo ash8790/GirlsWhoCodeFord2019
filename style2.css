@@ -1,0 +1,47 @@
+body, html {
+  height: 100%;
+  margin: 0;
+}
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 190px;
+}
+h2{
+  @font-face {
+    font-family: cambria;
+  }
+  text-indent: 40%;
+
+  margin-left: 375px
+}
+  div {
+    font-family: cambria;
+    font-size: 50px;
+    margin-right: -960px;
+
+  }
+
+select {
+      height: 20px;
+      width: 163px;
+      text-align: "center";
+}
+p {
+  font-size: 27px
+}
+.button{
+  background-color: red;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 25px;
+  font-style:180px;
+  margin-right: 220px;
+  cursor: pointer;
+  margin-bottom: 50px;
+}

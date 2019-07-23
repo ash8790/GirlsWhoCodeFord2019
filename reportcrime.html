@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<link rel = "stylesheet" href = "style2.css">
+<head>
+  <style>
+    body {background-color: beige;}
+  </style>
+</head>
+<body>
+  <h1 align = "center"><font size = "100">Report a Crime</font></h1>
+  <center><div class="row">
+    <div class="column">
+      <p><font size = "4">Name:</p>
+      <p>
+      <p><font size = "4">Phone Number*:</p>
+      <p>
+      <p><font size = "4">Type of Crime:</p>
+      <p>
+      <p><font size = "4">Location of Crime*:</p>
+      <p><font size = "4">Nearby Campus*:</p>
+      <p><font size = "4">Description of Criminal:<p>
+    </div>
+    <center><div class="column">
+      <form action="/action_page.php">
+      <input type="text" name="name" placeholder="Sample Name"><br>
+      <input type="phonenumber" name="name" placeholder="Sample Phone Number"><br>
+      <select>
+        <option value="Question">Type of Crime</option>
+        <option value="Theft">Theft</option>
+        <option value="Kidnapping">Kidnapping</option>
+        <option value="Battery">Battery</option>
+        <option value="Assault">Assault</option>
+        <option value="Burglary">Burglary</option>
+        <option value="Vandalism">Vandalism</option>
+        <option value = "Shoplifting">Shoplifting</option>
+        <option value="Shooting">Shooting</option>
+        <option value="Homocide">Homocide</option>
+        <option value="Other/I don't recall">Other/I don't recall</option>
+      </select>
+        <br>
+        <input type="location" name="name" placeholder="Sample Location"><br>
+        <select>
+        <option value="Question">Choose a College</option>
+        <option value="UCLA">UCLA</option>
+        <option value="California State University (of Sacremento)">CSUS</option>
+        <option value="University of North Carolina (Charlotte)">UNC</option>
+        <option value=""></option>
+        <option value=""></option>
+        </datalist>
+      </select>
+          <br>
+        <input type="sample" name="description" placeholder="Sample Description"; input style="height:100px;font-size:10pt;margin-top: 40px;"><br>
+        <br>
+<a href="#" class="button">REPORT</a>
+ </div>
+    </form>
+   </div>
+  </div>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 50%;
+  margin-bottom:40px;
+  /*height: 300px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+</style>
+</head>
+<body>

@@ -1,0 +1,27 @@
+<head>
+<script src = "https://cdnjs.cloudflare.com/ajax/libs/choo/6.13.3/bundle.min.js"></script>
+<script>
+  var defaultClient = MusixmatchApi.ApiClient.instance;
+  var key = defaultClient.authentications['key'];
+  key.apiKey = "c668cff55612a3df1e84093fd19bc00f";
+var albumId= 14250417; // {String}
+var opts = {
+    'format': "jsonp", // {String} output format: json, jsonp, xml.
+    'callback': "callback" // {String} jsonp callback
+};
+(new MusixmatchApi.AlbumApi()).albumGetGet(albumId, opts, (error, data, response) => {
+    callback(error, data, response, "albumGetGet");
+});
+trackId = 15445129;
+(new MusixmatchApi.TrackApi()).trackGetGet(trackId, opts, (error, data, response) => {
+    if (error) {
+        console.error(error);
+    } else if(response.text) {
+        data = JSON.parse(response.text);
+        console.log('Returned data:\n%s', JSON.stringify(data, null, 2));
+    }
+    else {
+        throw new Error('bad response')
+    }
+} );
+</script>
